@@ -1,7 +1,7 @@
 function  nbselect(target){
   var select = document.getElementById(target);
 
-  // select.style.display = 'none';
+  select.style.display = 'none';
 
   var optionArr = select.getElementsByTagName('option');
   var nb_width = select.offsetWidth;
