@@ -11,6 +11,7 @@
 <body>
 
   <div>
+    <lable>Города</lable>
     <select id='nb_select' multiple>
       <option value="kiev">Киев</option>
       <option value="lviv">Львов</option>
@@ -19,9 +20,28 @@
       <option value="poltava">Полтава</option>
     </select>
   </div>
+  <div>
+    <label>Реки</label>
+    <select id='nb_s2' multiple>
+      <option value="dnepr">dnepr</option>
+      <option value="ros">ros</option>
+      <option value="volga">volga</option>
+    </select>
+  </div>
+  <div>
+    <label>Планеты</label>
+    <select id='nb_1' multiple>
+      <option value="saturm">saturm</option>
+      <option value="mars">mars</option>
+      <option value="neptun">neptun</option>
+      <option value="yupiter">yupiter</option>
+    </select>
+  </div>
 
   <script>
   nbselect("nb_select");
+  nbselect("nb_s2");
+  nbselect("nb_1");
   </script>
 
 </body>

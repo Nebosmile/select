@@ -1,23 +1,38 @@
 function  nbselect(target){
   var select = document.getElementById(target);
+  select.style.display = 'none';
+
   var optionArr = select.getElementsByTagName('option');
-  console.log(optionArr);
   var nb_width = select.offsetWidth;
-  console.log(nb_width);
   var finalarr =[];
 
+  var father = select.parentNode;
+
+
+  var ul = document.createElement('ul');
+    ul.classList.add('nb_ul');
+
+
+
   var div = document.createElement('div');
-  div.classList.add('nb_select_wrapper');
-  div.style.width = nb_width + 'px';
-
-
-
-
+    div.classList.add('nb_select_wrapper');
+    div.style.minWidth = '100px';
 
   var input = document.createElement('input');
-  input.classList.add('nb_input');
-  var ul = document.createElement('ul');
-  ul.classList.add('nb_ul');
+    input.classList.add('nb_input');
+    input.addEventListener('click', function() {
+      inspection();
+    })
+
+
+function inspection() {
+  if(!ul.classList.contains('open')){
+    ul.classList.add('open');
+  }else{
+    ul.classList.remove('open');
+  }
+}
+
 
   optionArr =[].slice.call(optionArr);
 
@@ -57,5 +72,5 @@ function  nbselect(target){
   }
   div.appendChild(input);
   div.appendChild(ul);
-  document.body.appendChild(div)
+  father.appendChild(div)
 }
