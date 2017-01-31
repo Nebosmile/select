@@ -1,6 +1,7 @@
 function  nbselect(target){
   var select = document.getElementById(target);
-  select.style.display = 'none';
+
+  // select.style.display = 'none';
 
   var optionArr = select.getElementsByTagName('option');
   var nb_width = select.offsetWidth;
@@ -16,9 +17,11 @@ function  nbselect(target){
 
   var div = document.createElement('div');
     div.classList.add('nb_select_wrapper');
-    div.style.minWidth = '100px';
+
 
   var input = document.createElement('input');
+  input.name =select.name;
+  select.name = "";
     input.classList.add('nb_input');
     input.addEventListener('click', function() {
       inspection();
